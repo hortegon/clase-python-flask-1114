@@ -25,12 +25,29 @@ Para instalar dependencias y ejecutar el proyecto, sigue el `README.md`.
 ## Preguntas de reflexion tecnica
 
 1. Que problema concreto resuelve el entorno virtual en un proyecto Python?
+El entorno virtual evita conflictos entre librerías de distintos proyectos. Cada proyecto tiene sus propias dependencias.
+
 2. Que diferencia hay entre instalar `Flask` globalmente y hacerlo dentro de `.venv`?
+nstalar Flask globalmente afecta todo el sistema. Instalarlo en .venv solo afecta ese proyecto.
+
 3. Por que `requirements.txt` forma parte del proyecto y no de tu maquina personal?
+requirements.txt pertenece al proyecto porque guarda las librerías necesarias para que funcione en cualquier computadora.
+
 4. Cuando ejecutas `python app.py`, que archivo actua como punto de entrada y por que?
+l punto de entrada es app.py porque es el archivo que ejecutas con:
+python app.py
+
 5. Que relacion hay entre la ruta `/`, la funcion `inicio()` y el archivo `templates/index.html`?
+La ruta / llama a la función inicio() y esa función muestra templates/index.html.
+
 6. Que evidencia te da la terminal de que el servidor arranco correctamente?
+La terminal muestra algo como:
+Running on http://127.0.0.1:5000
+
+Eso indica que el servidor inició bien
+
 7. Si cambias el HTML y el navegador muestra otra cosa, que te demuestra eso sobre el flujo entre backend y frontend en este proyecto?
+Demuestra que Flask envía el HTML al navegador y el navegador muestra los cambios del frontend.
 
 ## Entregable
 

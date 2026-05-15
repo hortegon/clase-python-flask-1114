@@ -11,12 +11,38 @@ app = Flask(__name__)
 # esta funcion y devuelve la pagina `index.html`.
 @app.route("/")
 def inicio():
-    # `render_template` busca archivos dentro de la carpeta `templates`.
+    
     return render_template("index.html")
 
 
-# Este bloque se ejecuta solo si corremos `python app.py` desde la terminal.
+
+@app.route("/HOLA")
+def HOLA():
+    
+    return render_template("HOLA.html")
+
+
+@app.route("/CONTACTO")
+def CONTACTO():
+    
+    return render_template("CONTACTO.html")
+
+
+
+@app.route("/NS")
+def NS():
+    
+    return render_template("NS.html")
+
+
+
+@app.route("/PERSONA")
+def PERSONA():
+    
+    return render_template("PERSONA.html")
+
+
+
 if __name__ == "__main__":
-    # `debug=True` sirve en desarrollo porque reinicia el servidor
-    # cuando detecta cambios y muestra errores con mas detalle.
+   
     app.run(debug=True)
