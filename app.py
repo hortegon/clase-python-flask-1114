@@ -13,7 +13,7 @@ app = Flask(__name__)
 def inicio():
     
     return render_template("index.html")
-<<<<<<< HEAD
+
 
 
 
@@ -42,11 +42,18 @@ def PERSONA():
     
     return render_template("PERSONA.html")
 
+@app.route("/acerca")
+def acerca():
+    
+    return render_template("acerca.html")
+
+@app.route("/contacto")
+def contacto():
+    
+    return render_template("contacto.html")
 
 
-=======
-# Este bloque se ejecuta solo si corremos `python app.py` desde la terminal.
->>>>>>> 3af9cff22cb9cb331c17849a2a36bb79299e1fd7
+
 if __name__ == "__main__":
    
     app.run(debug=True)
