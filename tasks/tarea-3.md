@@ -53,7 +53,7 @@ En `index.html`, `acerca.html` y `contacto.html`, agrega enlaces:
 ```html
 <a href="/">Inicio</a>
 <a href="/acerca">Acerca</a>
-<a href="/contacto">Contacto</a>
+<a href="/CONTACTO">Contacto</a>
 ```
 
 Ideal: que el bloque de navegacion este en las 3 paginas.
