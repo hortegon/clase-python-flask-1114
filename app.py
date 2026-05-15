@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 # Cuando alguien entra a la direccion principal del sitio, Flask ejecuta
 # esta funcion y devuelve la pagina `index.html`.
-@app.route("/")
+@app.route("/index")
 def inicio():
     
     return render_template("index.html")
@@ -51,6 +51,30 @@ def acerca():
 def contacto():
     
     return render_template("contacto.html")
+
+@app.route("/rescursos")
+def rescursos():
+    
+    return render_template("rescursos.html")
+
+
+
+@app.route("/recursos")
+def recursos():
+    
+   
+
+     return render_template("recursos.html", recursos=recursos)
+
+recursos = [
+    "Git Hub",
+    "Git Bash",
+    "Paginas HTML",
+    "Variables Jinja"
+]
+
+
+
 
 
 
