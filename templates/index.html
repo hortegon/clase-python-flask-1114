@@ -1,36 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clase Flask 1114</title>
-  </head>
-  <body>
-    <!--
-      Esta pagina es muy simple a proposito.
-      La idea es que el alumno pueda leerla sin perderse.
-    -->
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Control</title>
+</head>
+<body>
+    <!-- Barra de navegación para conectar las páginas -->
+    <nav>
+        <a href="/">Inicio</a> | 
+        <a href="/acerca">Acerca</a> | 
+        <a href="/contacto">Contacto</a> | 
+        <a href="/recursos">Recursos</a>
+    </nav>
+    <hr>
 
-    <h1>Bienvenidos a la clase del profe Henry by Kyrbot</h1>
+    <!-- Mostramos las 3 variables usando Jinja2 -->
+    <h1>Bienvenido de vuelta, {{ nombre }}</h1>
 
-    <p>
-      Si estas viendo esto, ya diste un primer paso en programacion: tu
-      aplicacion esta corriendo y Flask pudo mostrar una pagina HTML.
-    </p>
-
-    <p>
-      Hoy empezamos simple, pero con una idea poderosa: cada gran programa
-      arranca con una primera linea de codigo. Este puede ser el comienzo de
-      algo enorme.
-    </p>
-
-    <hr />
-
-    <p>Primer objetivo cumplido: crear el entorno y levantar el servidor.</p>
-
-    <p>
-      Ahora este proyecto empieza a convertirse en un Mini Portal de Clase
-      Flask. En la tarea 3 vas a crear nuevas paginas y conectarlas con rutas.
-    </p>
-  </body>
+    <p>Tipo de cuenta: <strong>{{ rol }}</strong></p>
+    
+    <div>
+        <p>Tenés <strong>{{ alertas }}</strong> notificaciones sin leer hoy.</p>
+    </div>
+</body>
 </html>
+
+

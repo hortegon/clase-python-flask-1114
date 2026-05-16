@@ -1,20 +1,41 @@
-# Importamos Flask y una funcion que permite mostrar un HTML.
 from flask import Flask, render_template
 
-
-# Creamos la aplicacion principal.
-# Este objeto sera el centro de nuestro proyecto Flask.
 app = Flask(__name__)
 
-
-# Cuando alguien entra a la direccion principal del sitio, Flask ejecuta
-# esta funcion y devuelve la pagina `index.html`.
 @app.route("/")
 def inicio():
-    # `render_template` busca archivos dentro de la carpeta `templates`.
-    return render_template("index.html")
-# Este bloque se ejecuta solo si corremos `python app.py` desde la terminal.
+    # Variables dinámicas para la página de inicio
+    usuario_nombre = "Gabriela Garcia"
+    usuario_rol = "Administrador"
+    alertas_pendientes = 4
+    
+    return render_template(
+        "index.html", 
+        nombre=usuario_nombre, 
+        rol=usuario_rol, 
+        alertas=alertas_pendientes
+    )
+
+@app.route("/acerca")
+def acerca():
+    return render_template("acerca.html")
+
+@app.route("/contacto")
+def contacto():
+    return render_template("contacto.html")
+
+@app.route('/recursos')
+def recursos():
+    # Paso 2: Definir la lista en Python (mínimo 4 elementos)
+    lista_recursos = [
+        "🚀 Mi Entorno Virtual Configurado",
+        "Rutas en Flask",
+        "Plantillas HTML",
+        "Variables con Jinja",
+        "Bucle For en Jinja"
+    ]
+    # Paso 3: Enviar la lista a la plantilla
+    return render_template("recursos.html", recursos=lista_recursos)
+
 if __name__ == "__main__":
-    # `debug=True` sirve en desarrollo porque reinicia el servidor
-    # cuando detecta cambios y muestra errores con mas detalle.
     app.run(debug=True)

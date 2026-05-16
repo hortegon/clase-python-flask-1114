@@ -1,99 +1,69 @@
 # Tarea 3 - Crear varias rutas y varias paginas en Flask
 
-## Objetivo tecnico
+## Preparación
+ 1.   Ejecuta la app con python app.py.
+ 2.   Verifica que `http://127.0.0.1:5000/` responda correctamente.
+ ![alt text](image-5.png)
+ 3.   Ten abierto app.pyy la carpeta templates/.
+Guía paso a paso
 
-Convertir la app en un mini portal con varias paginas conectadas entre si.
-En esta tarea debes entender el flujo completo: `URL -> funcion Python -> plantilla HTML`.
 
-## Preparacion
 
-1. Ejecuta la app con `python app.py`.
-2. Verifica que `http://127.0.0.1:5000/` responde correctamente.
-3. Ten abierto `app.py` y la carpeta `templates/`.
+## Guía paso a paso
 
-## Guia paso a paso
+Paso 2 y 3: Crear la ruta/acerca y contacto
+![alt text](image-6.png)
 
-### Paso 1: Mantener la ruta principal
 
-No rompas la ruta `/` que ya existe. Debe seguir renderizando `index.html`.
-
-### Paso 2: Crear la ruta `/acerca`
-
-En `app.py`, agrega:
-
-```python
-@app.route("/acerca")
-def acerca():
-    return render_template("acerca.html")
-```
-
-### Paso 3: Crear la ruta `/contacto`
-
-En `app.py`, agrega:
-
-```python
-@app.route("/contacto")
-def contacto():
-    return render_template("contacto.html")
-```
-
-### Paso 4: Crear las plantillas nuevas
+Paso 4: Crear las plantillas nuevas
 
 Crea dos archivos:
 
-1. `templates/acerca.html`
-2. `templates/contacto.html`
+1. templates/acerca.html
+2. templates/contacto.html
+Cada archivo debe tener estructura HTML básica y un título visible (h1) para distinguir la página.
 
-Cada archivo debe tener estructura HTML basica y un titulo visible (`<h1>`) para distinguir la pagina.
+![alt text](image-7.png)
 
-### Paso 5: Agregar navegacion entre paginas
 
-En `index.html`, `acerca.html` y `contacto.html`, agrega enlaces:
+Paso 5: Agregar navegación entre páginas
+![alt text](image-8.png)
 
-```html
-<a href="/">Inicio</a>
-<a href="/acerca">Acerca</a>
-<a href="/contacto">Contacto</a>
-```
+## Lista de verificación de validación
 
-Ideal: que el bloque de navegacion este en las 3 paginas.
-
-### Paso 6: Verificar en navegador
-
-Abre manualmente estas URLs:
-
-1. `http://127.0.0.1:5000/`
-2. `http://127.0.0.1:5000/acerca`
-3. `http://127.0.0.1:5000/contacto`
-
-Luego navega solo con los links para comprobar que todo conecta.
-
-## Checklist de validacion
-
-1. `app.py` contiene `/`, `/acerca` y `/contacto`.
+1. app.pycontiene /, /acercay /contacto.
 2. Existen `index.html`, `acerca.html` y `contacto.html`.
 3. Las tres paginas cargan sin error.
-4. Hay navegacion entre las tres rutas.
+4. Hay navegación entre las tres rutas.
 
-## Errores comunes (y como corregirlos)
+`index.html` 
+![alt text](<Captura de pantalla 2026-05-15 220322.png>)
 
-1. `TemplateNotFound`: la ruta existe, pero falta el archivo HTML.
-   Solucion: crea el archivo dentro de `templates/` con el nombre exacto.
-2. Error 404: existe el HTML, pero no la ruta en `app.py`.
-   Solucion: agrega el `@app.route(...)` y su funcion.
-3. Link mal escrito (por ejemplo `/contato`).
-   Solucion: revisa que `href` coincida exactamente con la ruta.
+`acerca.html`
+![alt text](<Captura de pantalla 2026-05-15 220423.png>)
+
+`contacto.html`
+![alt text](<Captura de pantalla 2026-05-15 220345.png>)
+
 
 ## Preguntas de reflexion tecnica
+*Que parte define la URL pública: el nombre de la función o @app.route(...)?
 
-1. Que parte define la URL publica: el nombre de la funcion o `@app.route(...)`?
-2. Si cambias el nombre de la funcion, que debe mantenerse para no romper la URL?
-3. Por que separar cada seccion en su propia plantilla mejora el proyecto?
+    ¿Qué parte define la URL pública?La define exclusivamente el decorador @app.route(...). El texto entre comillas dentro de los paréntesis especifica la dirección exacta que el usuario debe escribir en el navegador.
 
-## Entregable
+*Si cambias el nombre de la función, ¿que debes mantener para no romper la URL?
 
-1. `app.py` actualizado con las 3 rutas.
-2. `templates/acerca.html` y `templates/contacto.html` creados.
-3. Navegacion funcional entre las tres paginas.
-4. Explicacion corta de un flujo completo, por ejemplo:
-   `/contacto -> contacto() -> render_template("contacto.html") -> navegador`.
+    ¿Qué debes mantener si cambias el nombre de la función?Debes mantener intacto el decorador @app.route(...) justo arriba de la función. El nombre de la función de Python es interno, pero el decorador es el que la vincula con la URL pública.
+
+*¿Por qué separar cada sección en su propia plantilla para mejorar el proyecto?
+
+    Mejora el proyecto por tres razones clave:
+
+    * Orden: Evita tener un solo archivo gigante y confuso. 
+
+    *Mantenimiento: Si falla la página de contacto, solo 
+      modificas contacto.html sin riesgo de romper el inicio.
+    
+    *Reutilización: Permite usar herramientas avanzadas de Flask 
+      (como la herencia de plantillas con {% extends %}) para no 
+      repetir el mismo menú de navegación en todos los archivos.

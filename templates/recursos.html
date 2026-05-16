@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Recursos</title>
+</head>
+<body>
+    <!-- Paso 6: Navegación superior -->
+    <nav>
+        <a href="/">Inicio</a> | 
+        <a href="/acerca">Acerca de</a> | 
+        <a href="/contacto">Contacto</a> | 
+        <a href="/recursos">Recursos</a>
+    </nav>
+
+    <!-- Paso 4: Título principal -->
+    <h1>Recursos de clase</h1>
+
+    <!-- Paso 5: Recorrer la lista con Jinja -->
+    <ul>
+      {% for recurso in recursos %}
+        <li>{{ recurso }}</li>
+      {% endfor %}
+    </ul>
+</body>
+</html>
