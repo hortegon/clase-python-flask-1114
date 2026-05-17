@@ -98,7 +98,7 @@ Tambien incluye links de regreso desde `recursos.html` al resto de paginas.
 
 1. Que cambia entre renderizar una variable simple y renderizar una lista?
 
-La diferencia es que una variable simple muestra un solo dato, por ejemplo un nombre o una edad. En cambio, una lista contiene varios datos y normalmente se utiliza un ciclo para mostrar todos sus elementos en la página.
+La diferencia es que una variable simple muestra un solo dato, por ejemplo un nombre o una edad. En cambio, una lista contiene varios datos y normalmente se utiliza un ciclo para mostrar todos sus elementos en la página
 
 
 2. Donde se ejecuta el bucle de Jinja: en el navegador o en Flask?
