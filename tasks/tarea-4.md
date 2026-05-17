@@ -97,8 +97,17 @@ Tambien incluye links de regreso desde `recursos.html` al resto de paginas.
 ## Preguntas de reflexion tecnica
 
 1. Que cambia entre renderizar una variable simple y renderizar una lista?
+
+La diferencia es que una variable simple muestra un solo dato, por ejemplo un nombre o una edad. En cambio, una lista contiene varios datos y normalmente se utiliza un ciclo para mostrar todos sus elementos en la página.
+
+
 2. Donde se ejecuta el bucle de Jinja: en el navegador o en Flask?
+
+El bucle de Jinja se ejecuta en Flask, es decir, en el servidor. Flask procesa el código, genera el HTML completo y después lo envía al navegador para que solo lo muestre.
+
 3. Que ventaja aporta este patron para casos reales (productos, tareas, alumnos)?
+
+Este patrón ayuda a no repetir código y facilita mostrar muchos datos de forma automática. Por ejemplo, sirve para listar productos en una tienda, tareas en una aplicación o alumnos en un curso, sin tener que escribir cada elemento manualmente. Además, hace que el código sea más ordenado y fácil de actualizar.
 
 ## Entregable
 
@@ -109,3 +118,5 @@ Tambien incluye links de regreso desde `recursos.html` al resto de paginas.
 5. Navegacion hacia y desde la pagina de recursos.
 6. Explicacion corta del flujo:
    `lista en Python -> render_template -> bucle Jinja -> HTML final en navegador`.
+
+   La lista se crea en Python, luego se envía con render_template, Jinja usa un bucle para recorrer y mostrar los datos, y finalmente el navegador recibe el HTML ya generado y lo muestra en pantalla.
