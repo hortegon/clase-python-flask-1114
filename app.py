@@ -3,7 +3,7 @@ from flask import Flask, render_template
 
 
 # Creamos la aplicacion principal.
-# Este objeto sera el centro de nuestro proyecto Flask.
+# Este objeto sera el centro de nuestro proyecto Flask
 app = Flask(__name__)
 
 

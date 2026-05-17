@@ -8,7 +8,7 @@ En esta primera clase no alcanza con "hacerlo andar". Tienes que empezar a disti
 
 ## Preparacion
 
-Para instalar dependencias y ejecutar el proyecto, sigue el `README.md`.
+Para instalar dependencias y ejecutar el proyecto, sigue el `README.md`
 
 ## Consigna
 

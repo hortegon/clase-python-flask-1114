@@ -92,7 +92,7 @@ Tambien incluye links de regreso desde `recursos.html` al resto de paginas.
 3. Lista fuera de la funcion o mal indentada.
    Solucion: verifica indentacion dentro de la funcion de la ruta.
 4. La pagina carga, pero no muestra elementos.
-   Solucion: confirma que la lista no este vacia y que el bucle este dentro del `<ul>`.
+   Solucion: confirma que la lista no este vacia y que el bucle este dentro del `<ul>`
 
 ## Preguntas de reflexion tecnica
 
