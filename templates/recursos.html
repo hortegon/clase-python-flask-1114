@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos</title>
+</head>
+<body>
+    
+<a href="/">Inicio</a>
+<a href="/acerca">Acerca</a>
+<a href="/contacto">Contacto</a>
+<a href="/recursos">Recursos</a>
+
+
+<h1>Recursos de clase</h1>
+<ul>
+  {% for recurso in recursos %}
+    <li>{{ recurso }}</li>
+  {% endfor %}
+</ul>
+
+
+<h2>Que cambia entre renderizar una variable simple y renderizar una lista?<br>
+
+    <h3>R/ Una variable muestra un solo dato.Una lista muestra varios elementos automaticamente usando un bucle for</h3><br>
+
+    <h2>Donde se ejecuta el bucle de Jinja: en el navegador o en Flask?</h2><br>
+
+    <h3>R/El bucle de Jinja se ejecuta en flask antes de que el HTML llegue al navegador</h3><br>
+
+</h2>
+</body>
+</html>

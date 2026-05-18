@@ -9,28 +9,25 @@ app = Flask(__name__)
 
 # Cuando alguien entra a la direccion principal del sitio, Flask ejecuta
 # esta funcion y devuelve la pagina `index.html`.
+
+#tarea dos
 @app.route("/")
 def inicio():
-    # `render_template` busca archivos dentro de la carpeta `templates`.
-    return render_template("index.html")
+    titulo = "INICIO"                 #1 VARIABLE USADA
+    usuario ="STEVEN MONROY 11-14"    #2 VARIABLE USADA
+    mensaje ="BIENVENIDOS A MI FLASK" #3 VARIABLE USADA
+
+    return render_template(
+        "index.html",
+        titulo=titulo, 
+        usuario=usuario, 
+        mensaje=mensaje
+    )
+    
+    
 
 
-@app.route("/musica")
-def musica():
-    # `render_template` busca archivos dentro de la carpeta `templates`.
-    return render_template("musica.html")
-
-@app.route("/futbol")
-def futbol():
-    # `render_template` busca archivos dentro de la carpeta `templates`.
-    return render_template("futbol.html")
-
-
-@app.route("/Ropa")
-def Ropa():
-    # `render_template` busca archivos dentro de la carpeta `templates`.
-    return render_template("Ropa.html")
-
+#tarea tres
 @app.route("/contacto")
 def contacto():
     return render_template("template/contacto.html")
@@ -40,8 +37,19 @@ def acerca():
     return render_template("template/acerca.html")
 
 
+#tarea cuatro
+@app.route("/recursos")
+def recursos():
+    recursos = [
+        "Entorno virtual",
+        "Rutas en Flask",
+        "Plantilla HTML",
+        "Variables con JInja"
+    ]
+
+    return render_template("recursos.html", recursos=recursos)
+
 # Este bloque se ejecuta solo si corremos `python app.py` desde la terminal.
 if __name__ == "__main__":
-    # `debug=True` sirve en desarrollo porque reinicia el servidor
-    # cuando detecta cambios y muestra errores con mas detalle.
+ 
     app.run(debug=True)

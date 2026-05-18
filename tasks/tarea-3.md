@@ -91,9 +91,10 @@ Luego navega solo con los links para comprobar que todo conecta.
 3. Por que separar cada seccion en su propia plantilla mejora el proyecto?
 
 ## Entregable
-
+  
 1. `app.py` actualizado con las 3 rutas.
 2. `templates/acerca.html` y `templates/contacto.html` creados.
 3. Navegacion funcional entre las tres paginas.
 4. Explicacion corta de un flujo completo, por ejemplo:
    `/contacto -> contacto() -> render_template("contacto.html") -> navegador`.
+ 
