@@ -87,8 +87,23 @@ Luego navega solo con los links para comprobar que todo conecta.
 ## Preguntas de reflexion tecnica
 
 1. Que parte define la URL publica: el nombre de la funcion o `@app.route(...)`?
+
+La URL pública la define @app.route(...).
+@app.route("/inicio")
+def home():
+    return "Hola"
+
+
 2. Si cambias el nombre de la funcion, que debe mantenerse para no romper la URL?
+
+Si cambias el nombre de la función, debe mantenerse igual la ruta dentro de @app.route(...).
+@app.route("/inicio")
+def pagina_principal():
+    return "Hola"
+    
+
 3. Por que separar cada seccion en su propia plantilla mejora el proyecto?
+Separar cada sección en su propia plantilla mejora la organización del proyecto, facilita el mantenimiento, permite reutilizar código y hace más fácil modificar cada parte sin afectar las demás.
 
 ## Entregable
 
