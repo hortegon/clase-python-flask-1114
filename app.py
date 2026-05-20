@@ -52,6 +52,21 @@ def contacto():
 
 
 
+@app.route("/recursos")
+def recursos():
+   recursos = [
+    "Entorno virtual",
+    "Rutas en Flask",
+    "Plantillas HTML",
+    "Variables con Jinja"
+]
+   return render_template("recursos.html",recursos=recursos)
+
+
+
+
+
+
 
 if __name__ == "__main__":
    

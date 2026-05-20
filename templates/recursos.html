@@ -3,19 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ACERCA DE</title>
+    <title>MUSICA</title>
   </head>
   <body>
-    
 
-    <h1>ACERCA DE LA PAGINA</h1>
+    <ul>
+  {% for recurso in recursos %}
+    <li>{{ recurso }}</li>
+  {% endfor %}
+</ul>
 
-    <br>
-    
 <a href="/">Inicio</a>
 <a href="/acerca">Acerca</a>
 <a href="/contacto">Contacto</a>
 <a href="/recursos">recursos</a>
 
-  </body>
-  </html>
+
+
+</body>
+</html>
