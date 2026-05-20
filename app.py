@@ -9,8 +9,15 @@ app = Flask(__name__)
 
 @app.route("/")
 def inicio():
+    
+    titulo = "FLASK"
+    usuario = "ALEXANDER CANO"
+    mensaje = "BIENVENIDOS A MI PAGINA"
    
-    return render_template("index.html")
+    return render_template("index.html",
+                           titulo=titulo,
+    usuario=usuario,
+    mensaje=mensaje)
 
 
 
@@ -25,6 +32,8 @@ def musica():
 def login():
    
     return render_template("LOGIN.html")
+
+
 
 @app.route("/HOLA")
 def hola():
