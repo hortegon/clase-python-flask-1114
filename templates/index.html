@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clase Flask 1114</title>
+    <title>{{titulo}}</title>
   </head>
   <body>
     <!--
@@ -11,7 +11,26 @@
       La idea es que el alumno pueda leerla sin perderse.
     -->
 
-    <h1>Bienvenidos a la clase del profe Henry by Kyrbot</h1>
+    <h1>{{usuario}}</h1>
+
+    <p>{{mensaje}}</p>
+
+  
+<a href="/acerca">Acerca</a>
+<a href="/contacto">Contacto</a>
+<a href="/recursos">Recursos</a>
+<br>
+
+
+1. Lista de las 3 variables usadas.
+<p>Titulo, Usuario y mensaje.</p>
+
+<br>
+
+2. En que linea o seccion del HTML se muestra cada una.
+<p>en title, en h1 y en p</p>
+
+<br>
 
     <p>
       Si estas viendo esto, ya diste un primer paso en programacion: tu
@@ -28,9 +47,63 @@
 
     <p>Primer objetivo cumplido: crear el entorno y levantar el servidor.</p>
 
+
+    <hr />
+
+    <p>## Preguntas de reflexion tecnica</p>
+
+    <p>1. Que problema concreto resuelve el entorno virtual en un proyecto Python?</p>
+    <p>
+      El entorno virtual sirve para evitar problemas con las librerías. O sea, que cada proyecto tenga sus propias cosas sin afectar otros proyectos o el sistema.
+    </p>
+
+    <br>
+    
+    <p>2. Que diferencia hay entre instalar `Flask` globalmente y hacerlo dentro de `.venv`?</p>
+    <p>
+      La diferencia es que si instalo Flask global, se instala para todo el computador. Pero si lo hago en .venv, solo funciona dentro de ese proyecto, y es más ordenado y seguro.
+    </p>
+
+    <br>
+
+    <p>3. Por que `requirements.txt` forma parte del proyecto y no de tu maquina personal?</p>
+    <p>
+      Porque requirements.txt guarda las librerías que usa el proyecto, entonces cualquier persona puede instalar lo mismo y que funcione igual, no depende de mi computador.
+    </p>
+
+    <br>
+
+    <p>4. Cuando ejecutas `python app.py`, que archivo actua como punto de entrada y por que?</p>
+    <p>
+      El archivo que actúa como punto de entrada es app.py, porque es el que ejecutamos y desde ahí arranca todo el programa.
+    </p>
+
+    <br>
+
+    <p>5. Que relacion hay entre la ruta `/`, la funcion `inicio()` y el archivo `templates/index.html`?</p>
+    <p>
+      La ruta / llama a la función inicio(), y esa función es la que muestra el archivo templates/index.html. O sea, conecta lo que pasa en el navegador con el archivo HTML.
+    </p>
+
+    <br>
+
+    <p>6. Que evidencia te da la terminal de que el servidor arranco correctamente?</p>
+    <p>
+      La evidencia es que en la terminal aparece un mensaje como que el servidor está corriendo, por ejemplo “Running on http://…”, eso indica que ya arrancó bien.
+    </p>
+    
+    <br>
+
+    <p>7. Si cambias el HTML y el navegador muestra otra cosa, que te demuestra eso sobre el flujo entre backend y frontend en este proyecto?</p>
+    <p>
+      Eso demuestra que el frontend (HTML) y el backend (Python) están conectados, porque cuando cambio el HTML y recargo, se ve el cambio, entonces sí hay comunicación entre los dos.
+    </p>  
+
+
     <p>
       Ahora este proyecto empieza a convertirse en un Mini Portal de Clase
       Flask. En la tarea 3 vas a crear nuevas paginas y conectarlas con rutas.
+
     </p>
   </body>
 </html>
