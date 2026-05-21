@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MUSICA</title>
+    <title>RECURSOS</title>
   </head>
   <body>
 
@@ -18,6 +18,15 @@
 <a href="/contacto">Contacto</a>
 <a href="/recursos">recursos</a>
 
+<P>
+  Explicacion corta del flujo:
+<BR>
+   `lista en Python -> render_template -> bucle Jinja -> HTML final en navegador`.
+  </P>
+  <BR>
+    <P>
+      Tengo mis datos guardados en una lista de Python dentro del backend y se los paso a la función render_template como una variable para que los envíe a la plantilla. El servidor recibe esta información y, mediante un bucle Jinja, procesa la lista repitiendo la etiqueta HTML por cada elemento que contiene. Finalmente, Jinja limpia todo su código de control y le entrega al navegador un HTML puro y estático, que es lo único que el usuario ve en su pantalla.
+    </P>
 
 
 </body>
