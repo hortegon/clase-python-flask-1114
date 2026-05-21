@@ -23,12 +23,31 @@ def inicio():
 
 @app.route("/contacto")
 def contacto():
-    return render_template("contacto.html")
+    return render_template("template/contacto.html")
+
+
+
+@app.route("/HOLA")
+def hola():
+    return render_template("HOLA.html")
 
 
 @app.route("/acerca")
 def acerca():
-    return render_template("acerca.html")
+    return render_template("template/acerca.html")
+
+
+@app.route("/ADIOS")
+def adios():
+    return render_template("ADIOS.html")
+
+
+
+@app.route("/LOVE")
+def love():
+    return render_template("LOVE.html")
+
+
 
 @app.route("/recursos")
 def recursos():
