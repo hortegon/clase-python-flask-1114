@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECURSOS</title>
+</head>
+<body>
+    <h1> RECURSOS </h1>
+
+     <a href="/">Inicio</a>
+<a href="/acerca">Acerca</a>
+<a href="/contacto">Contacto</a>
+<a href="/recursos">Recursos</a> <br>
+   <ul>
+  {% for recurso in recursos %}
+    <li>{{ recurso }}</li>
+  {% endfor %}
+</ul>
+
+<br>
+
+<p>Explicacion corta del flujo:</p>
+
+<p>La aplicación crea una lista en Python y la envía a render_template().
+Después, Jinja usa un bucle para recorrer la lista y mostrar los datos en la página HTML.
+Finalmente, el navegador recibe el HTML terminado y lo muestra al usuario.</p>
+
+
+</body>
+</html>
